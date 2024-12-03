@@ -2,7 +2,8 @@
 :root {
     --text-light: #E8E8E8;
     --heading-pink: #daa7ac;
-    --heading-yellow: #eac802;
+    --heading-yellow: #fcd265;
+    --heading-red: #db4f54;
     --link-teal: #3db7a9;
     --bullet-green: #329160;
     --bg-dark: #16160f;
@@ -36,16 +37,29 @@ h1 {
 
 h2 {
     color: var(--heading-yellow);
-    margin-top: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    color: var(--heading-red);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Sections */
 section {
     background-color: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    margin: 1rem 0;
+    padding: 1rem;
+    margin: 0.5rem 0;
     border-radius: 8px;
     border-left: 4px solid var(--bullet-green);
+}
+
+/* rule for headings at the start of sections */
+section > h2:first-child,
+section > h3:first-child {
+    margin-top: 0;
 }
 
 /* Lists */
