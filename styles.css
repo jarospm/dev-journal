@@ -1,0 +1,91 @@
+/* Base styles and variables */
+:root {
+    --text-light: #E8E8E8;
+    --heading-pink: #daa7ac;
+    --heading-yellow: #eac802;
+    --link-teal: #3db7a9;
+    --bullet-green: #329160;
+    --bg-dark: #16160f;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem;
+}
+
+/* Main content container */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--bg-dark);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Headings */
+h1 {
+    color: var(--heading-pink);
+    border-bottom: 3px solid var(--heading-yellow);
+    padding-bottom: 0.5rem;
+}
+
+h2 {
+    color: var(--heading-yellow);
+    margin-top: 2rem;
+}
+
+/* Sections */
+section {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border-left: 4px solid var(--bullet-green);
+}
+
+/* Lists */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+li::before {
+    content: "•";
+    color: var(--bullet-green);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Links */
+a {
+    color: var(--link-teal);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--link-teal);
+    text-decoration: underline;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
